@@ -15,7 +15,7 @@ USER ${USER_NAME}
 WORKDIR /youtrack
 
 RUN mkdir backups data logs conf temp && \
-    curl --location "https://download.jetbrains.com/charisma/youtrack-${YOUTRACK_VERSION}.zip" > youtrack.zip && \
+    curl --location "http://download.jetbrains.com/charisma/youtrack-${YOUTRACK_VERSION}.zip" > youtrack.zip && \
     unzip -q youtrack.zip && \
     rm -f youtrack.zip && \
     mv youtrack-${YOUTRACK_VERSION}/* . && \
